@@ -47,3 +47,128 @@ h1 em,h2 em{font-family:var(--display);font-weight:500;letter-spacing:-.035em}
 @media(max-width:960px){.site-header{grid-template-columns:1fr auto}.nav{display:none}.hero{grid-template-columns:1fr;min-height:auto;padding-top:11vw}.hero-art{height:580px;margin-top:2vw}.hero-card-main{right:12%;width:52%}.hero-card-float{left:8%;width:31%}.intro-grid,.method-grid,.about{grid-template-columns:1fr;gap:55px}.service-grid{grid-template-columns:1fr}.service-card{border-right:1px solid var(--line)!important;border-bottom:0}.service-card:last-child{border-bottom:1px solid var(--line)}.post-large{grid-column:span 8}.post-accent{grid-column:span 4}.post:nth-child(2),.post:nth-child(3),.post:nth-child(5),.post:nth-child(6){grid-column:span 4}.about-art{min-height:580px}.cta-box{min-height:650px}}
 @media(max-width:640px){.section-pad{padding-left:5.5vw;padding-right:5.5vw}.site-header{height:70px;padding:0 5.5vw}.brand img{width:72px}.header-cta{font-size:9px}.hero{padding-top:16vw}.hero h1{font-size:18vw}.hero-art{height:500px}.hero-card-main{width:61%;right:5%}.hero-card-float{width:40%;left:2%;bottom:8%}.hero-badge{font-size:8px;right:1%;bottom:3%}.hero-badge strong{font-size:15px}.hero-orbit{display:none}.hero-meta{margin-top:42px}.intro,.method,.content,.about,.cta{padding-top:18vw;padding-bottom:18vw}.intro-grid{margin-top:20px}.section-head{display:block}.section-head>p{margin-top:20px}.service-card{min-height:340px;padding:27px}.service-card h3{font-size:42px}.manifesto{min-height:520px;padding:60px 5vw}.manifesto h2{font-size:18vw}.method-grid{margin-top:20px}.step{grid-template-columns:43px 1fr;gap:15px}.step h3{font-size:23px}.content-grid{grid-template-columns:1fr 1fr;grid-auto-rows:180px;gap:10px}.post-large{grid-column:span 2;grid-row:span 2}.post-accent,.post:nth-child(2),.post:nth-child(3),.post:nth-child(5),.post:nth-child(6){grid-column:span 1;grid-row:span 1}.post figcaption{left:10px;right:8px;bottom:10px}.post figcaption b{font-size:12px}.about-art{min-height:470px}.about-frame{width:72%;left:4%}.about-sticker{width:155px;height:155px;font-size:9px;right:0;bottom:6%}.about-copy h2{font-size:17vw}.cta-box{min-height:610px;padding:25px 7%}.cta-content{margin-left:0;padding:50px 0}.cta h2{font-size:16vw}.cta-word{font-size:29vw}.footer-links{flex-wrap:wrap;gap:15px}.footer-bottom{display:block;line-height:1.8}.footer-bottom span{display:block}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marquee-track{animation:none}.reveal{opacity:1;transform:none;animation:none}}
+/* ===== MENU MOBILE SEM JS (checkbox hack) ===== */
+
+/* ===== ÍCONE HAMBÚRGUER ===== */
+.menu-toggle-label {
+  display: none; /* só aparece no mobile */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  padding: 4px;
+  background: transparent;
+  border: none;
+}
+
+.hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--ink); /* cor escura, igual ao texto */
+  transition: transform .3s ease, opacity .3s ease;
+  border-radius: 2px; /* levemente arredondado para suavizar */
+}
+
+/* Animação para "X" quando ativo */
+#menu-toggle:checked ~ .menu-toggle-label .hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+#menu-toggle:checked ~ .menu-toggle-label .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked ~ .menu-toggle-label .hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== MENU MOBILE ===== */
+@media (max-width: 960px) {
+  .menu-toggle-label {
+    display: flex;
+    justify-self: end;
+    order: 2; /* coloca ao lado do CTA desktop (que será escondido) */
+  }
+
+  /* Esconde o CTA do desktop no mobile */
+  .header-cta {
+    display: none;
+  }
+
+  /* Ajuste do grid do header */
+  .site-header {
+    grid-template-columns: auto 1fr auto auto;
+    gap: 12px;
+  }
+
+  /* Nav padrão: escondido, vira dropdown */
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(246, 245, 241, 0.98);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    padding: 20px 5vw 30px;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.07);
+    gap: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    z-index: 20;
+  }
+
+  .nav a {
+    font-size: 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.07);
+    opacity: 1;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .nav a:last-child {
+    border-bottom: 0;
+  }
+
+  /* Estilo especial para o CTA dentro do menu */
+  .nav-cta {
+    color: var(--pink) !important;
+    border-bottom: 1px solid var(--pink) !important;
+    padding-bottom: 6px !important;
+    margin-top: 8px;
+    font-weight: 700;
+  }
+  .nav-cta span {
+    font-size: 18px;
+    margin-left: 5px;
+  }
+
+  /* Exibe o nav quando checkbox está marcado */
+  #menu-toggle:checked ~ .nav {
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .menu-toggle-label {
+    width: 26px;
+    height: 26px;
+  }
+  .hamburger-line {
+    width: 20px;
+    height: 2px;
+  }
+  .nav a {
+    font-size: 13px;
+    padding: 12px 0;
+  }
+}
+@media (min-width: 768px) {
+  .nav-cta {
+    display: none;
+  }
+}

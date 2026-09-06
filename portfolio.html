@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfólio | Nathalia Toquetti</title>
+  <title>Portfólio | Nathalia Toquetti </title>
   <meta name="description" content="Portfólio de Nathalia Toquetti — Social Media, Designer & Produtora. Estratégia, design, influenciadores, campanhas, produção e projetos digitais.">
   <meta name="theme-color" content="#151515">
   <link rel="icon" type="image/png" href="assets/toquetti-logo.png">
@@ -16,17 +16,34 @@
 <body class="portfolio-page">
   <div class="noise" aria-hidden="true"></div>
   <header class="site-header" id="top">
-    <a class="brand" href="index.html" aria-label="Toquetti, voltar ao início">
-      <img src="assets/toquetti-logo.png" alt="Logo Toquetti LTDA">
+    <a class="brand" href="index.html#top" aria-label="Toquetti Produções, voltar ao início">
+      <img src="assets/toquetti-logo.png" alt="Logo Toquetti Produções LTDA">
     </a>
+
+    <!-- Checkbox oculto para controlar o menu -->
+    <input type="checkbox" id="menu-toggle" hidden>
+
+    <!-- Label com ícone hambúrguer estilizado -->
+    <label for="menu-toggle" class="menu-toggle-label" aria-label="Abrir menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </label>
+
+    <!-- Navegação principal -->
     <nav class="nav" aria-label="Navegação principal">
+      <a href="index.html#top">Início</a>
       <a href="index.html#servicos">Serviços</a>
       <a href="index.html#metodo">Método</a>
-      <a href="portfolio.html">Portfólio</a>
+      <a href="portfolio.html#trabalhos">Portfólio</a>
       <a href="index.html#conteudo">Conteúdo</a>
       <a href="index.html#sobre">Sobre</a>
+      <!-- Adicionamos o CTA no menu mobile -->
+      <a href="https://www.instagram.com/toquettiltda/" target="_blank" rel="noreferrer" class="nav-cta">fale com a Toquetti Produções <span>↗</span></a>
     </nav>
-    <a class="header-cta" href="https://www.instagram.com/toquettiltda/" target="_blank" rel="noreferrer">fale com a Toquetti <span>↗</span></a>
+
+    <!-- CTA que aparece apenas em desktop (mantido) -->
+    <a class="header-cta" href="https://www.instagram.com/toquettiltda/" target="_blank" rel="noreferrer">fale com a Toquetti Produções <span>↗</span></a>
   </header>
 
   <main>
@@ -36,15 +53,15 @@
           <div class="eyebrow light"><span class="dot"></span> portfólio / 2026</div>
           <div class="portfolio-index">NT / 08</div>
           <h1>Ideias que<br><em>viraram projeto.</em></h1>
-          <p>Uma seleção do trabalho de Nathalia Toquetti em social media, design, produção, influência, campanhas e audiovisual.</p>
+          <p>Uma seleção do trabalho de Nathalia Toquetti Produções em social media, design, produção, influência, campanhas e audiovisual.</p>
           <div class="hero-actions">
             <a class="btn btn-light" href="#trabalhos">explorar trabalhos <span>↓</span></a>
             <a class="portfolio-text-link" href="https://www.instagram.com/toquettiltda/" target="_blank" rel="noreferrer">solicitar proposta <span>↗</span></a>
           </div>
         </div>
         <div class="portfolio-hero-media reveal reveal-delay-1">
-          <div class="portfolio-hero-photo photo-main"><img src="assets/portfolio/emilly-victoria.webp" alt="Assessoria e produção para a influenciadora Emilly Victoria"></div>
-          <div class="portfolio-hero-photo photo-side"><img src="assets/portfolio/clodoaldo-interlagos.jpg" alt="Assessoria de influenciadores e parceria no cartódromo de Interlagos - SP"></div>
+          <div class="portfolio-hero-photo photo-main"><img src="assets/portfolio/foto1.jpg" alt="Assessoria e produção para a influenciadora Emilly Victoria"></div>
+          <div class="portfolio-hero-photo photo-side"><img src="assets/portfolio/foto2.jpg" alt="Assessoria de influenciadores e parceria no cartódromo de Interlagos - SP"></div>
           <div class="floating-label"><span>social media</span><strong>design</strong><strong>produção</strong></div>
         </div>
       </div>
@@ -61,11 +78,11 @@
       <div class="section-kicker">01 / perfil</div>
       <div class="portfolio-intro-grid">
         <div>
-          <div class="portfolio-bigline">8+ <span>anos de experiência<br>no mercado digital</span></div>
+          <div class="portfolio-bigline">9+ <span>anos de experiência<br>no mercado digital</span></div>
           <div class="portfolio-bigline small">6 <span>anos na Fusion<br>Influencers</span></div>
         </div>
         <div class="portfolio-intro-copy">
-          <p class="lead">Sou Social Media, Designer e Produtora, com mais de 8 anos de experiência no mercado digital.</p>
+          <p class="lead">Sou Social Media, Designer e Produtora, com mais de 9 anos de experiência no mercado digital.</p>
           <p>Atuo na criação de estratégias, gestão de conteúdo, design, gestão de influenciadores, estratégia digital, eventos e desenvolvimento visual e produção de marcas, influenciadores e empresas.</p>
           <p>Meu trabalho é transformar ideias em presença digital forte, resultados consistentes e imagem profissional.</p>
         </div>
@@ -107,69 +124,11 @@
       </div>
     </section>
 
-    <section class="work-section section-pad" id="trabalhos">
-      <div class="section-head work-head">
-        <div><div class="section-kicker">04 / seleção</div><h2>Trabalhos<br><em>em foco.</em></h2></div>
-        <div class="filter-row" role="group" aria-label="Filtrar trabalhos">
-          <button class="filter-btn is-active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="design">Design</button>
-          <button class="filter-btn" data-filter="influencia">Influência</button>
-          <button class="filter-btn" data-filter="campanhas">Campanhas</button>
-          <button class="filter-btn" data-filter="audiovisual">Audiovisual</button>
-        </div>
-      </div>
-
-      <div class="work-grid">
-        <article class="work-card work-wide" data-category="design" data-title="Criação de arte para Gebe — Grupo de Cassinos Telegram" data-type="Design & Artes" data-image="assets/portfolio/grupo-graffiti.jpg">
-          <button class="work-media" aria-label="Abrir projeto Grupo Gratuito"><img src="assets/portfolio/grupo-graffiti.jpg" alt="Criação de arte para Gebe Grupo de Cassinos Telegram" loading="lazy"><span class="work-open">abrir projeto <b>↗</b></span></button>
-          <div class="work-meta"><span>01 / design</span><h3>Grupo Gratuito</h3><p>Criação de arte para Gebe — Grupo de Cassinos Telegram.</p></div>
-        </article>
-
-        <article class="work-card" data-category="influencia" data-title="Assessoria e Produção para a Influenciadora Emilly Victoria" data-type="Influenciadores & Produção" data-image="assets/portfolio/emilly-victoria.webp">
-          <button class="work-media" aria-label="Abrir projeto Emilly Victoria"><img src="assets/portfolio/emilly-victoria.webp" alt="Assessoria e Produção para a Influenciadora Emilly Victoria" loading="lazy"><span class="work-open">abrir projeto <b>↗</b></span></button>
-          <div class="work-meta"><span>02 / influência</span><h3>Emilly Victoria</h3><p>Assessoria e produção para a influenciadora.</p></div>
-        </article>
-
-        <article class="work-card" data-category="influencia" data-title="Assessoria de Influenciadores e parceria com Clodoaldo Araujo, no cartódromo de Interlagos - SP" data-type="Influenciadores & Eventos" data-image="assets/portfolio/clodoaldo-interlagos.jpg">
-          <button class="work-media" aria-label="Abrir projeto Interlagos"><img src="assets/portfolio/clodoaldo-interlagos.jpg" alt="Assessoria de influenciadores e parceria com Clodoaldo Araujo no cartódromo de Interlagos - SP" loading="lazy"><span class="work-open">abrir projeto <b>↗</b></span></button>
-          <div class="work-meta"><span>03 / influência</span><h3>Interlagos</h3><p>Assessoria de influenciadores e parceria com Clodoaldo Araujo.</p></div>
-        </article>
-
-        <article class="work-card work-tall" data-category="campanhas" data-title="Campanha de Publicidade do aplicativo Resso, coordenando a inserção no YouTube do Peter Jordan" data-type="Campanha de Publicidade" data-image="assets/portfolio/resso-peter-jordan.webp">
-          <button class="work-media" aria-label="Abrir campanha Resso"><img src="assets/portfolio/resso-peter-jordan.webp" alt="Campanha de publicidade do aplicativo Resso coordenada por Nathalia Toquetti" loading="lazy"><span class="work-open">abrir projeto <b>↗</b></span></button>
-          <div class="work-meta"><span>04 / campanha</span><h3>Resso × Peter Jordan</h3><p>Campanha de publicidade e coordenação da inserção no YouTube.</p></div>
-        </article>
-
-        <article class="work-card work-tall" data-category="audiovisual" data-title="Participação na Rede TV em trabalhos avulsos" data-type="Audiovisual / TV" data-image="assets/portfolio/rede-tv.webp">
-          <button class="work-media" aria-label="Abrir projeto Rede TV"><img src="assets/portfolio/rede-tv.webp" alt="Participação na Rede TV em trabalhos avulsos" loading="lazy"><span class="work-open">abrir projeto <b>↗</b></span></button>
-          <div class="work-meta"><span>05 / audiovisual</span><h3>Rede TV</h3><p>Participação em trabalhos avulsos e produções para televisão.</p></div>
-        </article>
-
-        <article class="work-card" data-category="design" data-title="Criação de artes para campanhas no Kwai para agência Fusion Influencers" data-type="Design & Campanhas" data-image="assets/portfolio/campanhas-kwai.webp">
-          <button class="work-media" aria-label="Abrir projeto Kwai"><img src="assets/portfolio/campanhas-kwai.webp" alt="Criação de artes para campanhas no Kwai para agência Fusion Influencers" loading="lazy"><span class="work-open">abrir projeto <b>↗</b></span></button>
-          <div class="work-meta"><span>06 / design</span><h3>Campanhas no Kwai</h3><p>Criação de artes para campanhas da agência Fusion Influencers.</p></div>
-        </article>
-
-        <article class="work-card" data-category="audiovisual" data-title="Trabalhos como atriz e participação em vídeos no TeleKwai, Novelinhas e Propagandas" data-type="Audiovisual" data-image="assets/portfolio/telekwai.webp">
-          <button class="work-media" aria-label="Abrir projeto TeleKwai"><img src="assets/portfolio/telekwai.webp" alt="Trabalhos como atriz e participação em vídeos no TeleKwai Novelinhas e Propagandas" loading="lazy"><span class="work-open">abrir projeto <b>↗</b></span></button>
-          <div class="work-meta"><span>07 / audiovisual</span><h3>TeleKwai</h3><p>Atuação e participação em vídeos, Novelinhas e propagandas.</p></div>
-        </article>
-
-        <article class="work-card" data-category="audiovisual" data-title="Trabalhos como atriz e participação na Rede TV" data-type="Audiovisual / TV" data-image="assets/portfolio/rede-tv-atriz.webp">
-          <button class="work-media" aria-label="Abrir projeto Rede TV atriz"><img src="assets/portfolio/rede-tv-atriz.webp" alt="Trabalhos como atriz e participação na Rede TV" loading="lazy"><span class="work-open">abrir projeto <b>↗</b></span></button>
-          <div class="work-meta"><span>08 / audiovisual</span><h3>Rede TV / atuação</h3><p>Trabalhos como atriz e participação na televisão.</p></div>
-        </article>
-
-        <article class="work-card work-wide" data-category="influencia" data-title="Trabalhos e parcerias com Richard Rasmussen e influenciadores da Fusion Influencers" data-type="Influenciadores & Parcerias" data-image="assets/portfolio/richard-rasmussen.webp">
-          <button class="work-media" aria-label="Abrir projeto Richard Rasmussen"><img src="assets/portfolio/richard-rasmussen.webp" alt="Trabalhos e parcerias com Richard Rasmussen e influenciadores da Fusion Influencers" loading="lazy"><span class="work-open">abrir projeto <b>↗</b></span></button>
-          <div class="work-meta"><span>09 / influência</span><h3>Parcerias & influência</h3><p>Trabalhos e parcerias com Richard Rasmussen e influenciadores da Fusion Influencers.</p></div>
-        </article>
-      </div>
-    </section>
+    
 
     <section class="differentials">
       <div class="section-pad">
-        <div class="section-kicker light">05 / diferenciais</div>
+        <div class="section-kicker light">04 / diferenciais</div>
         <div class="diff-head"><h2>Não é só fazer.<br><em>É entender o todo.</em></h2><span>06</span></div>
         <div class="diff-grid">
           <div><span>01</span><h3>Visão 360º do mercado digital</h3></div>
@@ -182,10 +141,50 @@
       </div>
     </section>
 
+    <section class="work-section section-pad" id="trabalhos">
+      <div class="section-head work-head">
+        <div>
+          <div class="section-kicker">05 / trabalhos</div>
+          <h2>Projetos que<br><em>ganharam alcance.</em></h2>
+        </div>
+   
+      </div>
+      <p class="work-intro">Uma seleção de trabalhos, campanhas e projetos desenvolvidos ao longo da trajetória de Nathalia — conectando marcas, criadores, plataformas e produção.</p>
+
+      <div class="work-grid work-grid-minimal">
+        <article class="work-card work-wide" data-category="influencia" data-image="assets/portfolio/foto1.jpg" data-title="Assessoria e produção" data-type="Influência & produção">
+          <button class="work-media" type="button" aria-label="Abrir projeto de assessoria e produção"><img src="assets/portfolio/foto3.jpg" alt="Assessoria e produção" loading="lazy"><span class="work-open">ver projeto <b>↗</b></span></button>
+          <div class="work-meta"><span>influência · produção</span><h3>Assessoria & produção</h3><p>Um recorte visual do trabalho de posicionamento, produção e relacionamento com creators.</p></div>
+        </article>
+        <article class="work-card work-wide" data-category="influencia" data-image="assets/portfolio/foto2.jpg" data-title="Parcerias e ativações" data-type="Influência & eventos">
+          <button class="work-media" type="button" aria-label="Abrir projeto de parcerias e ativações"><img src="assets/portfolio/foto4.jpg" alt="Parcerias e ativações" loading="lazy"><span class="work-open">ver projeto <b>↗</b></span></button>
+          <div class="work-meta"><span>influência · eventos</span><h3>Parcerias & ativações</h3><p>Conexões entre creators, marcas, eventos e oportunidades de conteúdo.</p></div>
+        </article>
+      </div>
+
+      
+
+      <div class="social-proof">
+        <div class="social-proof-copy">
+          <div class="section-kicker">06 / presença pessoal</div>
+          <h3>Além das marcas,<br><em>a própria audiência.</em></h3>
+          <p>As contas pessoais de Nathalia também fazem parte do ativo criativo: são espaços para conteúdo, relacionamento e novas oportunidades de parceria.</p>
+        </div>
+        <div class="social-accounts">
+          <a class="social-account instagram" href="https://www.instagram.com/nathaliatoquetti/" target="_blank" rel="noreferrer">
+            <span class="social-icon">◎</span><div><small>Instagram pessoal</small><strong>@nathaliatoquetti</strong><div class="social-metric"> 52k seguidores <b>confirmar no perfil</b></div><p>Conteúdo, lifestyle, influência e relacionamento com marcas.</p></div><b>↗</b>
+          </a>
+          <a class="social-account tiktok" href="https://www.tiktok.com/@nathaliatoquetti" target="_blank" rel="noreferrer">
+            <span class="social-icon">♪</span><div><small>TikTok pessoal</small><strong>@nathaliatoquetti</strong><div class="social-metric"> 448k seguidores <b>confirmar no perfil</b></div><p>Vídeos, tendências e conteúdo com potencial de alcance.</p></div><b>↗</b>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="portfolio-contact section-pad" id="contato">
       <div class="portfolio-contact-grid">
         <div>
-          <div class="section-kicker">06 / contato</div>
+          <div class="section-kicker">07 / contato</div>
           <h2>Tem um projeto?<br><em>Vamos criar.</em></h2>
         </div>
         <div class="contact-links">
@@ -197,7 +196,7 @@
   </main>
 
   <footer class="footer section-pad portfolio-footer">
-    <div class="footer-brand"><img src="assets/toquetti-logo.png" alt="Toquetti LTDA"><p>Social Media, Designer & Produtora.</p></div>
+    <div class="footer-brand"><img src="assets/toquetti-logo.png" alt="Toquetti Produções LTDA"><p>Social Media, Designer & Produtora.</p></div>
     <div class="footer-links"><a href="index.html#top">início</a><a href="index.html#servicos">serviços</a><a href="portfolio.html">portfólio</a><a href="index.html#conteudo">conteúdo</a><a href="https://www.instagram.com/toquettiltda/" target="_blank" rel="noreferrer">instagram ↗</a></div>
     <div class="footer-bottom"><span>© <span id="year"></span> Toquetti Produções Ltda.</span><span>feito com intenção.</span></div>
   </footer>
@@ -207,7 +206,7 @@
     <div class="modal-panel">
       <button class="modal-close" data-modal-close aria-label="Fechar">×</button>
       <div class="modal-image"><img src="" alt=""></div>
-      <div class="modal-copy"><div class="modal-type"></div><h3 class="modal-title"></h3><p>Projeto apresentado no portfólio de Nathalia Toquetti.</p><a class="btn btn-dark" href="https://www.instagram.com/toquettiltda/" target="_blank" rel="noreferrer">falar sobre um projeto <span>↗</span></a></div>
+      <div class="modal-copy"><div class="modal-type"></div><h3 class="modal-title"></h3><p>Projeto apresentado no portfólio de Nathalia Toquetti .</p><a class="btn btn-dark" href="https://www.instagram.com/toquettiltda/" target="_blank" rel="noreferrer">falar sobre um projeto <span>↗</span></a></div>
     </div>
   </div>
 

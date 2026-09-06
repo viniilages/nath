@@ -19,4 +19,13 @@
     },{threshold:.14});
     els.forEach(el=>io.observe(el));
   }
+  // Fecha o menu mobile ao clicar em qualquer link da navegação
+  document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', function() {
+      const checkbox = document.getElementById('menu-toggle');
+      if (checkbox) {
+        checkbox.checked = false; // desmarca o checkbox, escondendo o menu
+      }
+    });
+  });
 })();
